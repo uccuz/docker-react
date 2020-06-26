@@ -5,7 +5,7 @@ service:
 
 #before test,run this command
 before_install:
-    - docker build -t cu/docker-react -f Dockerfile.env .
+    - docker build -t cu/docker-react -f Dockerfile.dev .
 
 #run command
 script:
