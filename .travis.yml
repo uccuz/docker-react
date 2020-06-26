@@ -1,0 +1,12 @@
+#use sudo and select service
+sudo: required
+service:
+    - docker
+
+#before test,run this command
+before_install:
+    - docker build -t cu/docker-react -f Dockerfile.env .
+
+#run command
+script:
+    - docker run -e CI=true cu/docker-react npm run test
